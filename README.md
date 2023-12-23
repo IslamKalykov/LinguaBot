@@ -21,7 +21,7 @@ Python: Основной язык программирования.
 Telegram API: Взаимодействие с пользователем через телеграм-бота.
 Искусственный интеллект: Продвинутые алгоритмы для персонализированного обучения и рекомендаций.
 Установка и использование:
-Склонируйте репозиторий: git clone https://github.com/yourusername/LinguaBot.git
+Склонируйте репозиторий: git clone https://github.com/IslamKalykov/LinguaBot.git
 Установите необходимые зависимости: pip install -r requirements.txt
 Запустите бота: python bot.py
 Начните изучение новых слов с LinguaBot!
