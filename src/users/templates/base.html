@@ -7,20 +7,27 @@
     <title>{% block title %}LinguaBot{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'users/css/styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+    <script>
+        new Snow();
+    </script>
 
-    <!-- Общие стили или скрипты могут быть размещены здесь -->
+
 </head>
 
 <body>
+    <script>
+        new Snow();
+    </script>
     <header>
         <a href="http://127.0.0.1:8000/users/home/">
             <p class="logo">LinquaBot</p>
         </a>
         <!-- Дополнительные элементы заголовка -->
     </header>
-
     <div id="content">
         {% block content %}{% endblock %}
     </div>

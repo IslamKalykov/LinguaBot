@@ -1,7 +1,13 @@
 /* users/static/users/css/style.css */
 
 body {
-    background-color: khaki;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(59, 59, 57);
 }
 
 a {
