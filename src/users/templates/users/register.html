@@ -1,8 +1,31 @@
-<!-- users/templates/users/register/register.html -->
-{% block content %}
-<h2>Register</h2>
-<form method="post">
-    {% csrf_token %} {{ form.as_p }}
-    <button type="submit">Register</button>
-</form>
+{% extends 'base.html' %} {% block title %}Register{% endblock %} {% block content %}
+<div class="register-container">
+    <h2>Register</h2>
+    <form method="post" action="{% url 'register' %}" class="register-form">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>{{ form.full_name.label_tag }}</td>
+                <td>{{ form.full_name }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.phone_number.label_tag }}</td>
+                <td>{{ form.phone_number }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password1.label_tag }}</td>
+                <td>{{ form.password1 }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password2.label_tag }}</td>
+                <td>{{ form.password2 }}</td>
+            </tr>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+</div>
 {% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LinguaBot{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/css/styles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+
+    <!-- Общие стили или скрипты могут быть размещены здесь -->
+</head>
+
+<body>
+    <header>
+        <a href="http://127.0.0.1:8000/users/home/">
+            <p class="logo">LinquaBot</p>
+        </a>
+        <!-- Дополнительные элементы заголовка -->
+    </header>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Мой веб-сайт</p>
+    </footer>
+    <!-- Дополнительные скрипты -->
+</body>
+
+</html>
