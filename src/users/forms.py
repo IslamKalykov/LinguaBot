@@ -1,6 +1,6 @@
 # users/forms.py
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .models import CustomUser
 
 class CustomUserCreationForm(UserCreationForm):
@@ -17,3 +17,8 @@ class CustomUserCreationForm(UserCreationForm):
         phone_number = self.cleaned_data.get('phone_number')
         # Добавьте свои собственные проверки номера телефона при необходимости
         return phone_number
+    
+class CustomAuthenticationForm(AuthenticationForm):
+    class Meta:
+        model = CustomUser
+        fields = ['username', 'password']

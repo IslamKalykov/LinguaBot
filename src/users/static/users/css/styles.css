@@ -10,6 +10,12 @@ body {
     background-color: rgb(75, 125, 127);
 }
 
+header {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
 }

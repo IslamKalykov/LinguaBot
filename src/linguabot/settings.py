@@ -128,3 +128,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'users', 'static')]
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+AUTHENTICATION_FORM = 'users.forms.CustomAuthenticationForm'
+LOGIN_REDIRECT_URL = 'user_profile'
