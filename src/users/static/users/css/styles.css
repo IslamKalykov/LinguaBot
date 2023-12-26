@@ -2,8 +2,8 @@
 
 body {
     padding: 0;
-    margin: 0;
-    width: 100vw;
+    margin: 0 auto;
+    width: 1200px;
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -18,6 +18,64 @@ header {
 
 a {
     text-decoration: none;
+}
+
+.site-header {
+    background-color: transparent;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.logo {
+    font-family: 'Pacifico', sans-serif;
+    color: orange;
+    /* Замените khaki на orange или другой цвет */
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+
+.logo-text {
+    color: orange;
+}
+
+.logo-text:hover {
+    color: white;
+    transition: 1s;
+}
+
+.menu-item {
+    margin-left: 20px;
+}
+
+.menu-item:hover {
+    transform: scale(1.15);
+    transition: transform 0.3s;
+}
+
+.menu-item a {
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    color: khaki;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu-item a:hover {
+    color: rgb(129, 213, 255);
 }
 
 .register-container {
@@ -65,7 +123,7 @@ table td {
 
 button {
     width: 200px;
-    font-family: 'Pacifico', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: larger;
     background-color: khaki;
     color: rgb(0, 0, 0);
@@ -77,20 +135,6 @@ button {
 
 button:hover {
     background-color: rgb(232, 209, 3);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    color: orange;
-    font-family: 'Pacifico', sans-serif;
-}
-
-.logo:hover {
-    color: red;
-    transition: 1s;
 }
 
 footer {
