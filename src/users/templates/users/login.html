@@ -2,7 +2,7 @@
 <div class="register-container">
     <h2>Login</h2>
     <form method="post" action="{% url 'login' %}" class="register-form">
-        {% csrf_token %} {{ form.as_p }}
+        {% csrf_token %} {{ form.username.label_tag }} {{ form.username }}<br> {{ form.password.label_tag }} {{ form.password }}<br>
         <button type="submit">Login</button>
     </form>
 </div>

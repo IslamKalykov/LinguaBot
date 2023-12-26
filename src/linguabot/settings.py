@@ -135,3 +135,4 @@ AUTHENTICATION_BACKENDS = [
 
 AUTHENTICATION_FORM = 'users.forms.CustomAuthenticationForm'
 LOGIN_REDIRECT_URL = 'user_profile'
+AUTH_USER_MODEL = 'users.CustomUser'
