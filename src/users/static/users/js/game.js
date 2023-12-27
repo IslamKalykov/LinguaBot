@@ -1,6 +1,6 @@
 // game.js
-var score = 0;
-// Нужно пофиксить баг с игрой
+let score = 0;
+
 document.addEventListener('DOMContentLoaded', function() {
     getNextWord();
 });
@@ -32,7 +32,7 @@ function getNextWord() {
                 const button = document.createElement('button');
                 button.textContent = option;
                 button.addEventListener('click', function() {
-                    checkAnswer(option, data.word);
+                    checkAnswer(option, data.translation);
                 });
                 answerOptionsElement.appendChild(button);
             });
@@ -45,9 +45,14 @@ function getNextWord() {
 function checkAnswer(selectedOption, correctAnswer) {
     const scoreElement = document.getElementById('score');
 
-    // Проверяем, является ли выбранный вариант правильным
     if (selectedOption === correctAnswer) {
         score += 1;
         scoreElement.textContent = score;
+        console.log('Правильный ответ!');
+    } else {
+        console.log('Неправильный ответ.');
     }
+
+    // Загружаем следующее слово
+    getNextWord();
 }

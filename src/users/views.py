@@ -62,6 +62,7 @@ def get_random_word(request):
 
     response_data = {
         'word': random_word.word,
+        'translation': random_word.translation,  # Добавляем перевод слова
         'options': [word.translation for word in options]
     }
 
