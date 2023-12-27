@@ -2,7 +2,10 @@ from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm, AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
-
+from django.http import JsonResponse
+from users.models import Word
+import random
+from django.views.decorators.http import require_GET
 
 def register(request):
     if request.method == 'POST':
@@ -46,3 +49,20 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+
+
+@require_GET
+def get_random_word(request):
+    words = Word.objects.all()
+    random_word = random.choice(words)
+    options = list(Word.objects.exclude(id=random_word.id).order_by('?')[:3])
+    options.append(random_word)
+    random.shuffle(options)
+
+    response_data = {
+        'word': random_word.word,
+        'options': [word.translation for word in options]
+    }
+
+    return JsonResponse(response_data)

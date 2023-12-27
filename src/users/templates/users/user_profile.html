@@ -1,3 +1,14 @@
-{% extends 'base.html' %} {% block title %}User Profile{% endblock %} {% block content %}
+{% extends 'base.html' %} {% load static %}
+<!-- Добавленный тег для работы со статическими файлами -->
+{% block title %}User Profile{% endblock %} {% block content %}
 <h2>Welcome, {{ user.username }}!</h2>
+<div id="word-container">
+    <p id="current-word"></p>
+    <div id="answer-options"></div>
+    <button id="next-button">Next Word</button>
+    <button id="new-round-button">New Round</button>
+</div>
+<p>Score: <span id="score">0</span></p>
+<script src="{% static 'users/js/game.js' %}"></script>
+<!-- Исправленный путь к файлу -->
 {% endblock %}
